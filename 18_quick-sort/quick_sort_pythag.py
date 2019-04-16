@@ -7,5 +7,9 @@ def pythag(n):
 print(pythag(5))
 print(pythag(10))
 
-#def quicksort(n):
+test=[5,8,2,1,6,7,3,4]
+def quicksort(arr):
+    red=quicksort([i for i in arr[1:] if i < arr[0]]) + [arr[0]] + quicksort([j for j in arr[1:] if j >= arr[0]]) if arr else []
+    return red
+print(quicksort(test))
     
